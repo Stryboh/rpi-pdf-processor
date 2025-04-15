@@ -56,9 +56,9 @@ async def file_handler(message: Message, bot: Bot) -> None:
                     processed_file,
                     filename=f"{original_path}"
                 )
-        os.remove(name)
             )
         
+        os.remove(name)
     except Exception as e:
         logger.error(f"Error processing file: {e}")
         await message.answer(f"❌ Error processing file: {e}")
